@@ -37,7 +37,7 @@ export default {
   //   '@/plugins/element-ui'
   // ],
 
-plugins: [{ src: '@/plugins/element-ui', ssr: false }],
+  plugins: [{ src: '@/plugins/element-ui', ssr: false }],
 
 
   /*
@@ -59,7 +59,7 @@ plugins: [{ src: '@/plugins/element-ui', ssr: false }],
   */
   build: {
     transpile: [/^element-ui/],
-    
+
     /*
     ** You can extend webpack config here
     */
