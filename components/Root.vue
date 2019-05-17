@@ -43,8 +43,29 @@
 </template>
  
 <script>
+var i = 0;
+var styleEl = document.createElement("style");
+document.head.appendChild(styleEl);
+styleEl.sheet.insertRule(
+  ".box1:before,.box1:after{background:linear-gradient(" +
+    i +
+    "deg, #89ff00, #060c21, #00bcd4)}",
+  0
+);
 
-
+function draw() {
+  requestAnimationFrame(draw);
+  // console.log(i);
+  i += 2;
+  styleEl.sheet.deleteRule(0);
+  styleEl.sheet.insertRule(
+    ".box1:before,.box1:after{background:linear-gradient(" +
+      i +
+      "deg, #89ff00, #060c21, #00bcd4)}",
+    0
+  );
+}
+draw();
 
 // import d1d0 from "@/components/d1d0";
 // import d2d0 from "@/components/d2d0";
@@ -58,8 +79,8 @@ var routes = {};
 let routes_arr = new Set();
 routes_arr.add("d1d0");
 routes_arr.add("d2d0");
-// routes_arr.add("d3d0");
-// routes_arr.add("d4d0");
+routes_arr.add("d3d0");
+routes_arr.add("d4d0");
 // routes_arr.add("d2d1");
 // routes_arr.add('d2d2');
 routes_arr.add("d2d3");
@@ -89,30 +110,6 @@ export default {
     }
   },
   mounted() {
-  var i = 0;
-var styleEl = document.createElement("style");
-document.head.appendChild(styleEl);
-styleEl.sheet.insertRule(
-  ".box1:before,.box1:after{background:linear-gradient(" +
-    i +
-    "deg, #89ff00, #060c21, #00bcd4)}",
-  0
-);
-
-function draw() {
-  requestAnimationFrame(draw);
-  // console.log(i);
-  i += 2;
-  styleEl.sheet.deleteRule(0);
-  styleEl.sheet.insertRule(
-    ".box1:before,.box1:after{background:linear-gradient(" +
-      i +
-      "deg, #89ff00, #060c21, #00bcd4)}",
-    0
-  );
-}
-draw();
-
     // setTimeout(() => {
     //   console.log("执行了");
     // }, 1);

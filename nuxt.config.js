@@ -1,6 +1,9 @@
 import pkg from './package'
 
 export default {
+  // router: {
+  //   base: '/'
+  // },
   mode: 'universal',
 
   /*
@@ -37,7 +40,7 @@ export default {
   //   '@/plugins/element-ui'
   // ],
 
-  plugins: [{ src: '@/plugins/element-ui', ssr: false }],
+  plugins: [{ src: '@/plugins/element-ui', ssr: true }],
 
 
   /*
@@ -59,11 +62,15 @@ export default {
   */
   build: {
     transpile: [/^element-ui/],
+    publicPath: '/m',
 
     /*
     ** You can extend webpack config here
     */
     extend(config, ctx) {
+      // if (!ctx.isDev) {
+      //   config.output.publicPath = '/m/'
+      // }
     }
   }
 }
