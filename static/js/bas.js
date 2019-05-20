@@ -1,3 +1,6 @@
+import * as THREE from 'three';
+
+
 THREE.BAS = {};
 
 THREE.BAS.ShaderChunk = {};
@@ -1109,3 +1112,5 @@ THREE.BAS.PhongAnimationMaterial.prototype._concatVertexShader = function() {
 
     ].join( "\n" );
 };
+
+export default THREE.BAS

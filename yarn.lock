@@ -2715,6 +2715,13 @@ expand-brackets@^2.1.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
+exports-loader@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.npm.taobao.org/exports-loader/download/exports-loader-0.7.0.tgz#84881c784dea6036b8e1cd1dac3da9b6409e21a5"
+  dependencies:
+    loader-utils "^1.1.0"
+    source-map "0.5.0"
+
 express@^4.16.3:
   version "4.16.4"
   resolved "https://registry.npm.taobao.org/express/download/express-4.16.4.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fexpress%2Fdownload%2Fexpress-4.16.4.tgz#fddef61926109e24c515ea97fd2f1bdbf62df12e"
@@ -3433,6 +3440,13 @@ import-from@^2.1.0:
 import-lazy@^2.1.0:
   version "2.1.0"
   resolved "https://registry.npm.taobao.org/import-lazy/download/import-lazy-2.1.0.tgz#05698e3d45c88e8d7e9d92cb0584e77f096f3e43"
+
+imports-loader@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.npm.taobao.org/imports-loader/download/imports-loader-0.8.0.tgz#030ea51b8ca05977c40a3abfd9b4088fe0be9a69"
+  dependencies:
+    loader-utils "^1.0.2"
+    source-map "^0.6.1"
 
 imurmurhash@^0.1.4:
   version "0.1.4"
@@ -6050,6 +6064,10 @@ source-map-url@^0.4.0:
   version "0.4.0"
   resolved "https://registry.npm.taobao.org/source-map-url/download/source-map-url-0.4.0.tgz#3e935d7ddd73631b97659956d55128e87b5084a3"
 
+source-map@0.5.0:
+  version "0.5.0"
+  resolved "https://registry.npm.taobao.org/source-map/download/source-map-0.5.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fsource-map%2Fdownload%2Fsource-map-0.5.0.tgz#0fe96503ac86a5adb5de63f4e412ae4872cdbe86"
+
 source-map@0.5.6:
   version "0.5.6"
   resolved "https://registry.npm.taobao.org/source-map/download/source-map-0.5.6.tgz#75ce38f52bf0733c5a7f0c118d81334a2bb5f412"
@@ -6392,6 +6410,20 @@ thread-loader@^1.2.0:
     async "^2.3.0"
     loader-runner "^2.3.0"
     loader-utils "^1.1.0"
+
+three-orbitcontrols-ts@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.npm.taobao.org/three-orbitcontrols-ts/download/three-orbitcontrols-ts-0.1.2.tgz#2040955904022ae19c2e9c52ffdff43168658abd"
+  dependencies:
+    three "^0.83.0"
+
+three@^0.104.0:
+  version "0.104.0"
+  resolved "https://registry.npm.taobao.org/three/download/three-0.104.0.tgz#9ad1da492153b753a89e0df066631215bd9d9087"
+
+three@^0.83.0:
+  version "0.83.0"
+  resolved "https://registry.npm.taobao.org/three/download/three-0.83.0.tgz#3b7f94790af3e021dac1f44a2617569ca2032b0b"
 
 throttle-debounce@^1.0.1:
   version "1.1.0"

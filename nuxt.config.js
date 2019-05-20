@@ -71,6 +71,26 @@ export default {
       // if (!ctx.isDev) {
       //   config.output.publicPath = '/m/'
       // }
+      // if (ctx.isClient) {
+        // 拓展 webpack 配置
+        // config.module.rules.push({
+        //   test: require.resolve("three/examples/js/controls/OrbitControls"),
+        //   use: "imports-loader?THREE=three"
+        // })
+        // config.module.rules.push({
+        //   test: require.resolve("three/examples/js/controls/OrbitControls"),
+        //   use: "exports-loader?THREE.OrbitControls"
+        // })
+
+        // config.module.rules.push({
+        //   test: require.resolve("./static/js/bas.js"),
+        //   use: "imports-loader?THREE=three"
+        // })
+        // config.module.rules.push({
+        //   test: require.resolve("./static/js/bas.js"),
+        //   use: "exports-loader?THREE.BAS"
+        // })
+      // }
     }
   }
 }
