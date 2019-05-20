@@ -1,9 +1,7 @@
 <template>
   <div>
     <!-- <h1>{{ msg }}</h1> -->
-
     <div id="d1d2"></div>
-
     <!-- <img src="https://ws1.sinaimg.cn/large/a83bb572gy1g18125erxug20go0971df.gif"> -->
     <!-- <remote-script src="https://pv.sohu.com/cityjson?ie=utf-8"></remote-script> -->
   </div>

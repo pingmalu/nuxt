@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div id="container"></div>
+    <transition name="el-zoom-in-center" appear>
+      <div id="container"></div>
+    </transition>
   </div>
 </template>
  
