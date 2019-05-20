@@ -19,13 +19,23 @@ routes_arr.forEach(v => {
 });
 
 export default {
-  components: routes
+  components: routes,
+  data() {
+    return {
+      title: "状态"
+    };
+  },
+  head() {
+    return {
+      title: this.title
+    };
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 .m-show {
-  display:flex;
+  display: flex;
   margin: 0 auto;
   justify-content: center;
   flex-wrap: wrap;

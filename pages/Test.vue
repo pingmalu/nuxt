@@ -11,6 +11,11 @@ import C from "@/components/demo/Car";
 export default {
   components: {
     C
+  },
+  head() {
+    return {
+      title: '测试'
+    };
   }
 };
 </script>
