@@ -1,5 +1,5 @@
-import * as THREE from 'three';
-
+// import * as THREE from 'three';
+var THREE = require('three')
 
 THREE.BAS = {};
 

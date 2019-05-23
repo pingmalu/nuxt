@@ -14,7 +14,9 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { hid: 'description', name: 'description', content: pkg.description },
+      { name: "referrer", content: "no-referrer" }
+
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -72,24 +74,24 @@ export default {
       //   config.output.publicPath = '/m/'
       // }
       // if (ctx.isClient) {
-        // 拓展 webpack 配置
-        // config.module.rules.push({
-        //   test: require.resolve("three/examples/js/controls/OrbitControls"),
-        //   use: "imports-loader?THREE=three"
-        // })
-        // config.module.rules.push({
-        //   test: require.resolve("three/examples/js/controls/OrbitControls"),
-        //   use: "exports-loader?THREE.OrbitControls"
-        // })
+      // 拓展 webpack 配置
+      // config.module.rules.push({
+      //   test: require.resolve("three/examples/js/controls/OrbitControls"),
+      //   use: "imports-loader?THREE=three"
+      // })
+      // config.module.rules.push({
+      //   test: require.resolve("three/examples/js/controls/OrbitControls"),
+      //   use: "exports-loader?THREE.OrbitControls"
+      // })
 
-        // config.module.rules.push({
-        //   test: require.resolve("./static/js/bas.js"),
-        //   use: "imports-loader?THREE=three"
-        // })
-        // config.module.rules.push({
-        //   test: require.resolve("./static/js/bas.js"),
-        //   use: "exports-loader?THREE.BAS"
-        // })
+      // config.module.rules.push({
+      //   test: require.resolve("./static/js/bas.js"),
+      //   use: "imports-loader?THREE=three"
+      // })
+      // config.module.rules.push({
+      //   test: require.resolve("./static/js/bas.js"),
+      //   use: "exports-loader?THREE.BAS"
+      // })
       // }
     }
   }

@@ -30,6 +30,10 @@
         <d2d3 class="d2d3" :url="url3" v-show="show">HOME</d2d3>
       </transition>
     </div>
+    <!-- <div>{{info}}</div>
+    <div>
+      <img src="https://ws1.sinaimg.cn/large/a83bb572gy1g38y81vry3j21hc0swaef.jpg" alt="vue">
+    </div> -->
 
     <!-- <div class="box" v-on:mouseover="changeActive($event)" v-on:mouseout="removeActive($event)">
       <d2d3 class="d2d3" :url="url2">SSH</d2d3>
@@ -43,9 +47,6 @@
 </template>
  
 <script>
-
-
-
 // import d1d0 from "@/components/d1d0";
 // import d2d0 from "@/components/d2d0";
 // import d3d0 from "@/components/d3d0";
@@ -71,13 +72,20 @@ routes_arr.forEach(v => {
   routes[v] = require("@/components/demo/" + v).default;
 });
 // console.log(routes);
+import axios from "axios";
 export default {
+  asyncData({ params }) {
+    return axios.get('http://c1.malu.me/api/stopcar').then(res => {
+      return { info: res.data.data };
+    });
+  },
   data() {
     return {
       url1: "//c1.malu.me/api/loglist",
       url2: "//c1.malu.me/api/loglist/ssh",
       url3: "//c1.malu.me/api/loglist/d",
-      show: true
+      show: true,
+      info: "123"
     };
   },
   methods: {
@@ -89,29 +97,40 @@ export default {
     }
   },
   mounted() {
-  var i = 0;
-var styleEl = document.createElement("style");
-document.head.appendChild(styleEl);
-styleEl.sheet.insertRule(
-  ".box1:before,.box1:after{background:linear-gradient(" +
-    i +
-    "deg, #89ff00, #060c21, #00bcd4)}",
-  0
-);
+    var i = 0;
+    var styleEl = document.createElement("style");
+    document.head.appendChild(styleEl);
+    styleEl.sheet.insertRule(
+      ".box1:before,.box1:after{background:linear-gradient(" +
+        i +
+        "deg, #89ff00, #060c21, #00bcd4)}",
+      0
+    );
 
-function draw() {
-  requestAnimationFrame(draw);
-  // console.log(i);
-  i += 2;
-  styleEl.sheet.deleteRule(0);
-  styleEl.sheet.insertRule(
-    ".box1:before,.box1:after{background:linear-gradient(" +
-      i +
-      "deg, #89ff00, #060c21, #00bcd4)}",
-    0
-  );
-}
-draw();
+    function draw() {
+      requestAnimationFrame(draw);
+      // console.log(i);
+      i += 2;
+      styleEl.sheet.deleteRule(0);
+      styleEl.sheet.insertRule(
+        ".box1:before,.box1:after{background:linear-gradient(" +
+          i +
+          "deg, #89ff00, #060c21, #00bcd4)}",
+        0
+      );
+    }
+    draw();
+    // axios
+    //   .get("//c1.malu.me/api/stopcar")
+    //   .then(response => {
+    //     this.info = response.data.data;
+    //     console.log(this.info);
+    //   })
+    //   .catch(error => {
+    //     console.log(error);
+    //     this.errored = true;
+    //   })
+    //   .finally(() => (this.loading = false));
 
     // setTimeout(() => {
     //   console.log("执行了");

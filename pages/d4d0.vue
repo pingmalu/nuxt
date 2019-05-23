@@ -9,7 +9,7 @@
 
 <script>
 import * as THREE from "three";
-import BAS from "../static/js/bas.js";
+import BAS from "~/static/js/bas.js";
 import "gsap";
 // import OrbitControls from "three/examples/js/controls/OrbitControls";
 import { OrbitControls } from "three-orbitcontrols-ts";
